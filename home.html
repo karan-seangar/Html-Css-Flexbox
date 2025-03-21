@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+    <link rel="stylesheet" href="homeStyle.css">
+</head>
+<body>
+    <nav class="col-1" style="position: relative; padding: 10px; display: flex; flex-direction: column; align-items: center;">
+        <img src="BL_logo_square_png.png" alt="Logo" style="width: 80%; height: auto; max-width: 150px; margin-bottom: 20px;">
+        <ol style="padding-left: 0; list-style: none; text-align: center;">
+            <li style="margin: 10px 0;"><a href="#" onclick="loadContent('card.html')">Cards</a></li>
+            <li style="margin: 10px 0;"><a href="#" onclick="loadContent('gallery.html')">Photo Gallery</a></li>
+            <li style="margin: 10px 0;"><a href="#" onclick="loadContent('mediaObject.html')">Media Object</a></li>
+        </ol>
+    </nav>
+    <div class="col-2">
+        <header>Header</header>
+        <main class="content">
+            <article id="content"><h1>This is Home Page</h1></article>
+        </main>
+        <footer>Footer</footer>
+    </div>
+    
+    <script>
+        function loadContent(page) {
+            fetch(page)
+                .then(response => {
+                    if (!response.ok) throw new Error("File not found: " + page);
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('content').innerHTML = data;
+                    console.log("Loaded successfully:", page);
+                })
+                .catch(error => console.error("Error loading content:", error));
+        }
+    </script>
+</body>
+</html>

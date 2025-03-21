@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <style>
+        .card-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            width: 250px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            text-align: center;
+            background: #fff;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .card-body {
+            padding: 15px;
+        }
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .card-text {
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.FEqv7YYMNjXtrVYqo7HHzAHaE7?w=252&h=180&c=7&r=0&o=5&pid=1.7" alt="Card 1">
+            <div class="card-body">
+                <div class="card-title">Card 1</div>
+                <div class="card-text">This is the first card description.</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://img.freepik.com/premium-photo/one-most-beautiful-countries-that-people-travel-kasmir_924629-3817.jpg" alt="Card 2">
+            <div class="card-body">
+                <div class="card-title">Card 2</div>
+                <div class="card-text">This is the second card description.</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.ShDMVFbdsBcORh_GCwAqmAHaEc?w=249&h=180&c=7&r=0&o=5&pid=1.7" alt="Card 3">
+            <div class="card-body">
+                <div class="card-title">Card 3</div>
+                <div class="card-text">This is the third card description.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
